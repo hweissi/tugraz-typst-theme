@@ -142,7 +142,7 @@
     body 
   }
 
-  logic.polylux-slide(content)
+  logic.polylux-slide(content, max-repetitions: 15)
 }
 
 #let new-section-slide(name) = {
@@ -196,7 +196,7 @@
       radius: 0pt
     ),
     title-style: (
-      color: m-light-brown.darken(10%),
+      color: m-light-brown.darken(20%),
       weight: "medium",
 
       align: left
