@@ -1,0 +1,11 @@
+[package]
+name = "tugraz-typst-theme"
+version = "1.0.0"
+entrypoint = "./tugraz-polylux.typ"
+authors = ["hweissi"]
+description = "TU Graz Typst Theme"
+
+[template]
+path = "./"
+entrypoint = "main.typ"
+
