@@ -1,6 +1,6 @@
 {
-  description = "LaTeX environment";
-  nixConfig.bash-prompt = "\[nix-develop\]$ ";
+  description = "typst environment";
+  nixConfig.bash-prompt = "\[typst\]$ ";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -19,7 +19,7 @@
         fonts = with p; [
           fira
         ];
-        fontPaths = (builtins.map (x: x + "/share/fonts/opentype") fonts) ++ (builtins.map (x: x + "/share/fonts/truetype") fonts);
+        fontPaths = (builtins.map (x: x + "/share/fonts/opentype") fonts) ++ (builtins.map (x: x + "/share/fonts/truetype") fonts) ++ [./fonts];
         fontParam = p.lib.concatStringsSep ":" fontPaths;
       in {
         devShell = p.mkShell.override {stdenv = p.stdenv;} rec {
