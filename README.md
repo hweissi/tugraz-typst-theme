@@ -19,3 +19,8 @@ Init project with template
 ```sh
 typst init @local/tugraz-typst-theme:1.0.0
 ```
+
+To build package using Nix, simply type `nix build`. The presentation will appear in `result/`.
+This repo can use Github Actions to automatically build and upload the finished PDF.
+To do that, enable write access for Github Actions in the repository settings, and tag a commit.
+The resulting PDF appears in the Releases page of the repo.
